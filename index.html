@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyvä Juttu — Circular Jute Solutions</title>
+  <meta name="description" content="Hyvä Juttu is a Finland-based startup piloting circular jute shopping bags with QR traceability, store returns, and repurposing into nonwoven felts for protective packaging." />
+  <!-- Privacy-friendly analytics (no cookies). Replace data-domain with your GitHub Pages domain. -->
+  <script defer data-domain="hyvajuttu.github.io" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root{
+      --bg:#0b1726; --card:#0f2138; --muted:#96a2b4; --brand:#24c08b; --brand2:#80e3bf; --text:#ecf1f7; --accent:#3aACE1;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#091120, #0b1726);color:var(--text)}
+    a{color:var(--brand2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,23,38,.75);backdrop-filter:saturate(160%) blur(10px);z-index:10;border-bottom:1px solid rgba(255,255,255,.07)}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;gap:10px;align-items:center}
+    .logo .mark{width:36px;height:36px;border-radius:12px;background:conic-gradient(from 90deg,var(--brand),var(--brand2));box-shadow:var(--shadow)}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,#10243a,#0d1e33);color:var(--text)}
+    .btn:hover{border-color:rgba(255,255,255,.25)}
+    .primary{background:linear-gradient(180deg,var(--brand),#1ca774);border:none;color:#07141f}
+    .primary:hover{filter:brightness(.95)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:48px 0}
+    .hero h1{font-size:44px;line-height:1.05;margin:0 0 16px}
+    .hero p{color:var(--muted);font-size:18px}
+    .card{background:linear-gradient(180deg,#0f2138,#0e1d31);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    h2{font-size:28px;margin:28px 0 12px}
+    h3{font-size:20px;margin:14px 0 8px}
+    .badge{display:inline-block;background:rgba(36,192,139,.15);color:var(--brand2);border:1px solid rgba(36,192,139,.35);padding:6px 10px;border-radius:999px;font-size:12px;margin-bottom:10px}
+    ul{margin:8px 0 0 18px;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:#0c1a2c;border:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:12px}
+    .section{padding:32px 0}
+    .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;align-items:stretch}
+    .flow .step{display:flex;flex-direction:column;gap:8px;align-items:flex-start;justify-content:center}
+    .arrow{display:flex;align-items:center;justify-content:center;color:#5aa9e6}
+    .muted{color:var(--muted)}
+    footer{padding:36px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.07);margin-top:36px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0c1a2c;color:var(--text)}
+    form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    /* Bilingual toggle */
+    [data-i18n]{display:none}
+    html[data-lang="en"] [data-i18n="en"], html[data-lang="fi"] [data-i18n="fi"]{display:unset}
+    .lang-toggle{display:inline-flex;gap:8px;align-items:center}
+    .lang-toggle button{background:#0c1a2c;border:1px solid rgba(255,255,255,.15);color:var(--text);border-radius:999px;padding:6px 10px;cursor:pointer}
+    .lang-toggle button.active{background:var(--brand);color:#062019;border:none}
+    @media (max-width:950px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.flow{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><div class="mark"></div><strong>Hyvä Juttu</strong></div>
+        <div class="nav-links">
+          <a href="#about"><span data-i18n="en">About</span><span data-i18n="fi">Tietoa meistä</span></a>
+          <a href="#mission"><span data-i18n="en">Mission</span><span data-i18n="fi">Tavoite</span></a>
+          <a href="#products"><span data-i18n="en">Products</span><span data-i18n="fi">Tuotteet</span></a>
+          <a href="#collab"><span data-i18n="en">Collaboration</span><span data-i18n="fi">Yhteistyö</span></a>
+          <a href="#sourcing"><span data-i18n="en">Sourcing</span><span data-i18n="fi">Hankinta</span></a>
+          <a class="btn primary" href="#contact"><span data-i18n="en">Contact</span><span data-i18n="fi">Yhteys</span></a>
+          <div class="lang-toggle">
+            <button id="btn-en" class="active" aria-label="Switch to English">EN</button>
+            <button id="btn-fi" aria-label="Vaihda suomeksi">FI</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="badge" data-i18n="en">Circular retail · Finland</span>
+        <span class="badge" data-i18n="fi">Kiertotalous vähittäiskaupassa · Suomi</span>
+        <h1>
+          <span data-i18n="en">Jute bags that come back as packaging — <em>closing the loop</em>.</span>
+          <span data-i18n="fi">Juuttikassit, jotka palaavat pakkauksiksi — <em>suljettu kierto</em>.</span>
+        </h1>
+        <p data-i18n="en">Hyvä Juttu builds a traceable, circular system for everyday shopping: QR‑enabled jute totes → store returns → recycled into nonwoven felts used as protective packaging in distribution. Real reuse, real material recovery.</p>
+        <p data-i18n="fi">Hyvä Juttu rakentaa jäljitettävän kiertojärjestelmän arkiseen asiointiin: QR‑koodatut juuttikassit → palautus kauppaan → kierrätys huoviksi, joita käytetään suojapakkauksena jakelussa. Todellista uudelleenkäyttöä ja materiaalin talteenottoa.</p>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <a class="btn primary" href="#collab"><span data-i18n="en">Propose a Pilot</span><span data-i18n="fi">Ehdota pilottia</span></a>
+          <a class="btn" href="#mission"><span data-i18n="en">Learn more</span><span data-i18n="fi">Lue lisää</span></a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0" data-i18n="en">At a glance</h3>
+        <h3 style="margin-top:0" data-i18n="fi">Yhteenveto</h3>
+        <ul>
+          <li data-i18n="en">Designed in Finland · Pilot-ready (5,000 units)</li>
+          <li data-i18n="fi">Suunniteltu Suomessa · Pilottivalmis (5 000 kpl)</li>
+          <li data-i18n="en">QR traceability · Consumer rewards on return</li>
+          <li data-i18n="fi">QR‑jäljitettävyys · Palkinto palautuksesta</li>
+          <li data-i18n="en">In-house repurpose: jute → protective felts (void‑fill)</li>
+          <li data-i18n="fi">Sisäinen uudelleenkäyttö: juutti → suojahuovat</li>
+          <li data-i18n="en">Supports 2025 circular goals (less virgin plastic, more material recycling)</li>
+          <li data-i18n="fi">Tukee 2025‑tavoitteita (vähemmän neitseellistä muovia, enemmän materiaalikierrätystä)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 data-i18n="en">About us</h2>
+      <h2 data-i18n="fi">Tietoa meistä</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p data-i18n="en">Hyvä Juttu is a Tampere‑based startup focused on practical circular solutions for retail. We combine durable, low‑impact jute products with simple consumer experiences and operational flows that work with Nordic logistics.</p>
+          <p data-i18n="fi">Hyvä Juttu on tamperelainen startup, joka keskittyy käytännön kiertotalousratkaisuihin kaupalle. Yhdistämme kestävät juuttituotteet selkeään asiakaskokemukseen ja logistiikkaan sopiviin prosesseihin.</p>
+          <p class="muted" data-i18n="en">We build systems shoppers enjoy using and warehouses can actually run.</p>
+          <p class="muted" data-i18n="fi">Rakennamme järjestelmiä, joita asiakkaat käyttävät mielellään ja joita varastot pystyvät pyörittämään.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="en">Facts</h3>
+          <h3 data-i18n="fi">Faktat</h3>
+          <ul>
+            <li><span data-i18n="en">Legal name (proposed):</span><span data-i18n="fi">Nimi (ehdotus):</span> <strong>Hyvä Juttu</strong></li>
+            <li data-i18n="en">Focus: Circular retail, fiber reuse, packaging dunnage</li>
+            <li data-i18n="fi">Fokus: Kiertotalous kaupassa, kuidun uudelleenkäyttö, pakkausten suojamateriaali</li>
+            <li data-i18n="en">HQ: Tampere, Finland</li>
+            <li data-i18n="fi">Kotipaikka: Tampere, Suomi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <h2 data-i18n="en">Mission & Goals</h2>
+      <h2 data-i18n="fi">Missio & Tavoitteet</h2>
+      <div class="grid-3">
+        <div class="card"><h3 data-i18n="en">Mission</h3><h3 data-i18n="fi">Missio</h3>
+          <p data-i18n="en">Reduce plastic waste in everyday shopping by replacing single‑use carriers and recovering fibers back into logistics.</p>
+          <p data-i18n="fi">Vähennämme muovijätettä arjen ostoksissa korvaamalla kertakäyttökassit ja palauttamalla kuidut kiertoon logistiikassa.</p>
+        </div>
+        <div class="card"><h3 data-i18n="en">2025 Goals</h3><h3 data-i18n="fi">2025 Tavoitteet</h3>
+          <ul>
+            <li data-i18n="en">Launch a 5,000‑bag pilot in 2–3 stores</li>
+            <li data-i18n="fi">Käynnistä 5 000 kassin pilotti 2–3 myymälässä</li>
+            <li data-i18n="en">≥70% sell‑through in 16 weeks</li>
+            <li data-i18n="fi">≥70 % myyntiaste 16 viikossa</li>
+            <li data-i18n="en">≥10% returns by 12 months</li>
+            <li data-i18n="fi">≥10 % palautus 12 kuukaudessa</li>
+            <li data-i18n="en">Replace ≥25% of protective dunnage in one DC with jute felts</li>
+            <li data-i18n="fi">Korvaa ≥25 % suojapakkauksesta (yksi jakelukeskus) juuttihuovilla</li>
+          </ul></div>
+        <div class="card"><h3 data-i18n="en">Principles</h3><h3 data-i18n="fi">Periaatteet</h3>
+          <ul>
+            <li data-i18n="en">Mono‑material, repairable, clearly labeled</li>
+            <li data-i18n="fi">Yksimateriaalinen, korjattava, selkeästi merkitty</li>
+            <li data-i18n="en">Transparent sourcing & responsible labor</li>
+            <li data-i18n="fi">Läpinäkyvä hankinta & vastuullinen työ</li>
+            <li data-i18n="en">Open metrics; publish results quarterly</li>
+            <li data-i18n="fi">Avoimet mittarit; julkaistaan kvartaaleittain</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <h2 data-i18n="en">Products</h2>
+      <h2 data-i18n="fi">Tuotteet</h2>
+      <div class="grid-3">
+        <div class="card"><h3 data-i18n="en">Jute Shopper (Standard)</h3><h3 data-i18n="fi">Juuttikassi (Perus)</h3>
+          <ul>
+            <li data-i18n="en">12–16 oz woven jute, reinforced seams</li>
+            <li data-i18n="fi">12–16 oz kudottu juutti, vahvistetut saumat</li>
+            <li data-i18n="en">10–15 kg load; 50–100+ reuse cycles</li>
+            <li data-i18n="fi">10–15 kg kantavuus; 50–100+ käyttökertaa</li>
+            <li data-i18n="en">2‑color custom print; unique QR</li>
+            <li data-i18n="fi">2‑värinen räätälöity painatus; yksilöllinen QR</li>
+          </ul>
+        </div>
+        <div class="card"><h3 data-i18n="en">Jute Shopper (Weather‑lined)</h3><h3 data-i18n="fi">Juuttikassi (Säävuorattu)</h3>
+          <ul>
+            <li data-i18n="en">Light bio‑based lining (optional)</li>
+            <li data-i18n="fi">Kevyt biopohjainen vuori (valinnainen)</li>
+            <li data-i18n="en">Moisture‑tolerant; retains recyclability</li>
+            <li data-i18n="fi">Kosteutta kestävä; kierrätettävyys säilyy</li>
+            <li data-i18n="en">Ideal for Nordic climate</li>
+            <li data-i18n="fi">Sopii Pohjoismaiden ilmastoon</li>
+          </ul>
+        </div>
+        <div class="card"><h3 data-i18n="en">Recycled Jute Felts</h3><h3 data-i18n="fi">Kierrätetyt juuttihuovat</h3>
+          <ul>
+            <li data-i18n="en">Needle‑punched nonwovens from returns</li>
+            <li data-i18n="fi">Neulahuovutetut kuitukankaat palautuksista</li>
+            <li data-i18n="en">Void‑fill, edge liners, pallet layer pads</li>
+            <li data-i18n="fi">Täytemateriaali, reunasuojat, lavavälikkeet</li>
+            <li data-i18n="en">Non‑food‑contact packaging use</li>
+            <li data-i18n="fi">Ei elintarvikekosketukseen</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="collab" class="section">
+      <h2 data-i18n="en">Proposed Collaboration Plan</h2>
+      <h2 data-i18n="fi">Ehdotettu yhteistyösuunnitelma</h2>
+      <div class="card">
+        <div class="flow" style="margin-top:8px">
+          <div class="step"><span class="pill">1</span><span data-i18n="en" class="muted">Buy: customer buys QR‑enabled jute bag</span><span data-i18n="fi" class="muted">Osto: asiakas ostaa QR‑juuttikassin</span></div>
+          <div class="arrow">→</div>
+          <div class="step"><span class="pill">2</span><span data-i18n="en" class="muted">Use: 50–100+ trips; basic care</span><span data-i18n="fi" class="muted">Käyttö: 50–100+ kertaa; perushoito</span></div>
+          <div class="arrow">→</div>
+          <div class="step"><span class="pill">3</span><span data-i18n="en" class="muted">Return: in‑store bin near deposit returns</span><span data-i18n="fi" class="muted">Palauta: myymäläastia panttipisteen lähellä</span></div>
+          <div class="arrow">→</div>
+          <div class="step"><span class="pill">4</span><span data-i18n="en" class="muted">Backhaul: store → DC via existing routes</span><span data-i18n="fi" class="muted">Takakuljetus: myymälä → jakelukeskus</span></div>
+          <div class="arrow">→</div>
+          <div class="step"><span class="pill">5</span><span data-i18n="en" class="muted">Repurpose: sort, bale, fiberize → nonwoven felts</span><span data-i18n="fi" class="muted">Uudelleenkäyttö: lajittele, paalaa, kuiduta → huovat</span></div>
+          <div class="arrow">→</div>
+          <div class="step"><span class="pill">6</span><span data-i18n="en" class="muted">Reuse: felts replace plastic dunnage</span><span data-i18n="fi" class="muted">Uusiokäyttö: huovat korvaavat muovitäytteen</span></div>
+        </div>
+        <div style="margin-top:14px" class="muted">
+          <span data-i18n="en">KPIs: ≥70% sell‑through (16w); ≥10% returns (12m); ≥50% QR scans; ≥25% dunnage in one DC replaced with jute felts within 12 months.</span>
+          <span data-i18n="fi">Tavoitteet: ≥70 % myynti (16 vk); ≥10 % palautus (12 kk); ≥50 % QR‑skannaukset; ≥25 % suojapakkaus yhdellä jakelukeskuksella korvataan juuttihuovilla 12 kk:ssa.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sourcing" class="section">
+      <h2 data-i18n="en">Product Sourcing Method</h2>
+      <h2 data-i18n="fi">Hankintatapa</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 data-i18n="en">Factories & Audits</h3><h3 data-i18n="fi">Tehtaat & Auditoinnit</h3>
+          <ul>
+            <li data-i18n="en">Bangladesh partner mills with export track record</li>
+            <li data-i18n="fi">Bangladeshin kumppanitehtaat, vientikokemus</li>
+            <li data-i18n="en">ISO 9001/14001; BSCI/SA8000 social audits</li>
+            <li data-i18n="fi">ISO 9001/14001; BSCI/SA8000 sosiaaliset auditoinnit</li>
+            <li data-i18n="en">OEKO‑TEX inks/dyes; REACH compliance</li>
+            <li data-i18n="fi">OEKO‑TEX värit/musteet; REACH-vaatimustenmukaisuus</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i18n="en">Traceability & Compliance</h3><h3 data-i18n="fi">Jäljitettävyys & Vaaditut tiedot</h3>
+          <ul>
+            <li data-i18n="en">Batch IDs → QR landing pages</li>
+            <li data-i18n="fi">Erätunnukset → QR‑sivut</li>
+            <li data-i18n="en">Import docs retained 5 years</li>
+            <li data-i18n="fi">Tuontiasiakirjat säilytetään 5 vuotta</li>
+            <li data-i18n="en">Producer responsibility reporting (FI)</li>
+            <li data-i18n="fi">Tuottajavastuuraportointi (FI)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 data-i18n="en">Contact</h2>
+      <h2 data-i18n="fi">Yhteys</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p><strong>Hyvä Juttu</strong><br/>Tampere, Finland</p>
+          <p class="muted">Email: <a href="mailto:hello@hyvajuttu.example">hello@hyvajuttu.example</a><br/>Phone: +358 40 000 0000</p>
+          <p class="muted" data-i18n="en">We welcome pilots with Finnish retailers, logistics operators, and packaging partners.</p>
+          <p class="muted" data-i18n="fi">Etsimme pilotteja suomalaisten kaupan, logistiikan ja pakkausalan kumppaneiden kanssa.</p>
+        </div>
+        <div class="card">
+          <form action="mailto:hello@hyvajuttu.example" method="post" enctype="text/plain">
+            <div class="row">
+              <div><label><span data-i18n="en">Name</span><span data-i18n="fi">Nimi</span><br/><input required name="name" placeholder="Your name"/></label></div>
+              <div><label>Email<br/><input required type="email" name="email" placeholder="you@example.com"/></label></div>
+            </div>
+            <label style="display:block;margin-top:10px"><span data-i18n="en">Message</span><span data-i18n="fi">Viesti</span><br/>
+              <textarea rows="4" name="message" placeholder="Tell us about your project or pilot idea..."></textarea>
+            </label>
+            <div style="margin-top:12px"><button class="btn primary" type="submit"><span data-i18n="en">Send</span><span data-i18n="fi">Lähetä</span></button></div>
+          </form>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px;font-size:12px">
+        <span data-i18n="en">Data references: Finnish plastic bag usage (Helsinki Times, 2022); Danish EPA carrier bag LCA; S‑ryhmä circular goals.</span>
+        <span data-i18n="fi">Tietolähteet: Muovikassien käyttö Suomessa (Helsinki Times, 2022); Tanskan EPA:n kassien elinkaariselvitys; S‑ryhmän kiertotaloustavoitteet.</span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <script>document.write(new Date().getFullYear())</script> Hyvä Juttu — Circular Jute Solutions · Tampere
+    </div>
+  </footer>
+
+  <script>
+    // Very light bilingual toggle for GitHub Pages
+    const html = document.documentElement;
+    const btnEN = document.getElementById('btn-en');
+    const btnFI = document.getElementById('btn-fi');
+    function setLang(l){
+      html.setAttribute('data-lang', l);
+      btnEN.classList.toggle('active', l==='en');
+      btnFI.classList.toggle('active', l==='fi');
+      // Optional: simple pageview event per language (Plausible custom event)
+      if(window.plausible){ plausible('LanguageSwitch', {props:{lang:l}}); }
+    }
+    btnEN.addEventListener('click', ()=>setLang('en'));
+    btnFI.addEventListener('click', ()=>setLang('fi'));
+  </script>
+</body>
+</html>
+Initial website upload.
