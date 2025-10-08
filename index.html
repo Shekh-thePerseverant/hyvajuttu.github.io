@@ -305,3 +305,150 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyvä Juttu — Circular Jute Solutions</title>
+  <meta name="description" content="Hyvä Juttu builds a traceable, circular system for everyday shopping in Finland: QR-enabled jute totes → store returns → recycled into nonwoven felts used as protective packaging." />
+  <!-- Privacy-friendly analytics (no cookies). Change data-domain to YOUR real Pages domain -->
+  <script defer data-domain="shekh-theperseverant.github.io" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root{
+      --white:#ffffff;
+      --bg:#f7fbf7;                  /* soft white-green */
+      --ink:#17323f;                 /* text */
+      --muted:#5b7280;               /* muted text */
+      --fi-blue:#5aa7ff;             /* Finland light blue accent */
+      --fi-blue-dark:#1b6fe2;        /* darker for hovers */
+      --green:#208e53;               /* natural green primary */
+      --green-2:#e8f3ec;             /* light green background */
+      --border:#e3ecf2;
+      --shadow:0 8px 28px rgba(20,72,100,.08);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:var(--fi-blue-dark);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--border);z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .mark{width:36px;height:36px;border-radius:12px;background:
+      conic-gradient(from 180deg,var(--fi-blue) 0 25%, var(--white) 25% 50%, var(--green) 50% 75%, var(--fi-blue) 75% 100%);box-shadow:var(--shadow)}
+    .links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid var(--border);background:var(--white);color:var(--ink);box-shadow:0 1px 0 rgba(0,0,0,.02)}
+    .btn:hover{border-color:#d5e3eb}
+    .primary{background:linear-gradient(180deg,var(--green),#177642);border:none;color:#fff}
+    .primary:hover{filter:brightness(.98)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:42px 0}
+    .hero h1{font-size:42px;line-height:1.06;margin:0 0 12px}
+    .badge{display:inline-block;background:var(--green-2);color:var(--green);border:1px solid #cfe6d7;padding:6px 10px;border-radius:999px;font-size:12px;margin-bottom:10px}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    h2{font-size:28px;margin:28px 0 12px}
+    h3{font-size:20px;margin:14px 0 8px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    ul{margin:8px 0 0 18px;color:var(--muted)}
+    .section{padding:28px 0}
+    .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:stretch}
+    .step{display:flex;flex-direction:column;gap:8px}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#f0f6ff;color:#1b6fe2;font-size:12px;border:1px solid #d8e7ff}
+    .muted{color:var(--muted)}
+    footer{padding:32px 0;border-top:1px solid var(--border);color:var(--muted);margin-top:36px}
+
+    /* Bilingual toggle */
+    [data-i18n]{display:none}
+    html[data-lang="en"] [data-i18n="en"],
+    html[data-lang="fi"] [data-i18n="fi"]{display:unset}
+    .lang{display:inline-flex;gap:8px;align-items:center}
+    .lang button{background:#f1f7ff;border:1px solid #d9e9ff;color:#0c3d8a;border-radius:999px;padding:6px 10px;cursor:pointer}
+    .lang button.active{background:var(--fi-blue);color:#fff;border-color:var(--fi-blue)}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.flow{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><div class="mark"></div><strong>Hyvä Juttu</strong></div>
+        <div class="links">
+          <a href="#about"><span data-i18n="en">About</span><span data-i18n="fi">Tietoa</span></a>
+          <a href="#mission"><span data-i18n="en">Mission</span><span data-i18n="fi">Missio</span></a>
+          <a href="#products"><span data-i18n="en">Products</span><span data-i18n="fi">Tuotteet</span></a>
+          <a href="#collab"><span data-i18n="en">Collaboration</span><span data-i18n="fi">Yhteistyö</span></a>
+          <a href="#sourcing"><span data-i18n="en">Sourcing</span><span data-i18n="fi">Hankinta</span></a>
+          <a href="#sources"><span data-i18n="en">Sources</span><span data-i18n="fi">Lähteet</span></a>
+          <a class="btn primary" href="#contact"><span data-i18n="en">Contact</span><span data-i18n="fi">Yhteys</span></a>
+          <div class="lang">
+            <button id="btn-en" class="active" aria-label="Switch to English">EN</button>
+            <button id="btn-fi" aria-label="Vaihda suomeksi">FI</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="badge" data-i18n="en">Circular retail · Finland</span>
+        <span class="badge" data-i18n="fi">Kiertotalous kaupassa · Suomi</span>
+        <h1>
+          <span data-i18n="en">Jute bags that come back as packaging — closing the loop.</span>
+          <span data-i18n="fi">Juuttikassit palaavat pakkauksiksi — suljettu kierto.</span>
+        </h1>
+        <p class="muted" data-i18n="en">QR-enabled jute totes → store returns → recycled into nonwoven felts used as protective packaging in distribution. Real reuse and material recovery that align with Finland’s circular economy goals.</p>
+        <p class="muted" data-i18n="fi">QR-koodatut juuttikassit → palautus myymälään → kierrätys neulahuoviksi, joita käytetään suojapakkauksina jakelussa. Todellista uudelleenkäyttöä ja materiaalin talteenottoa, linjassa Suomen kiertotaloustavoitteiden kanssa.</p>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a class="btn primary" href="#collab"><span data-i18n="en">Propose a Pilot</span><span data-i18n="fi">Ehdota pilottia</span></a>
+          <a class="btn" href="#mission"><span data-i18n="en">Learn more</span><span data-i18n="fi">Lue lisää</span></a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0" data-i18n="en">At a glance</h3>
+        <h3 style="margin-top:0" data-i18n="fi">Yhteenveto</h3>
+        <ul>
+          <li data-i18n="en">Designed in Finland · Pilot-ready (5,000 units)</li>
+          <li data-i18n="fi">Suunniteltu Suomessa · Pilottivalmis (5 000 kpl)</li>
+          <li data-i18n="en">QR traceability · Return rewards</li>
+          <li data-i18n="fi">QR-jäljitettävyys · Palkinto palautuksesta</li>
+          <li data-i18n="en">Jute → protective felts (void-fill) for logistics</li>
+          <li data-i18n="fi">Juutti → suojahuovat (täytemateriaali) logistiikkaan</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 data-i18n="en">About us</h2><h2 data-i18n="fi">Tietoa meistä</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p data-i18n="en">Hyvä Juttu is a Tampere-based startup building practical circular solutions for retail. We combine durable, low-impact jute products with simple consumer experiences and warehouse-friendly operations.</p>
+          <p data-i18n="fi">Hyvä Juttu on tamperelainen startup, joka rakentaa käytännön kiertotalousratkaisuja kaupalle. Yhdistämme kestävät juuttituotteet selkeään asiakaskokemukseen ja varastoystävällisiin prosesseihin.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="en">Facts</h3><h3 data-i18n="fi">Faktat</h3>
+          <ul>
+            <li><span data-i18n="en">HQ:</span><span data-i18n="fi">Kotipaikka:</span> Tampere, Finland</li>
+            <li data-i18n="en">Focus: circular retail, fiber reuse, packaging dunnage</li>
+            <li data-i18n="fi">Fokus: kiertotalous kaupassa, kuidun uudelleenkäyttö, pakkausten suojamateriaali</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section id="mission" class="section">
+      <h2 data-i18n="en">Mission & Goals</h2><h2 data-i18n="fi">Missio & Tavoitteet</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3 data-i18n="en">Mission</h3><h3 data-i18n="fi">Missio</h3>
+          <p data-i18n="en">Reduce plastic waste in everyday shopping by replacing single-use carriers and recovering fibers into logistics.</p>
+          <p data-i18n="fi">Vähentää muovijätettä arjen ostoksissa korvaamalla kertakäyttökassit ja palauttamalla kuidut logistiikkaan.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="e
