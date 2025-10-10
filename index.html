@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hyvä Juttu — Circular Jute Solutions</title>
-  <meta name="description" content="Hyvä Juttu pilots a traceable circular system in Finland: QR-enabled jute shoppers → store returns → recycled into nonwoven felts for protective packaging. Designed for retailers, investors and collaborators." />
+  <meta name="description" content="Hyvä Juttu pilots a traceable circular system in Finland: QR-enabled jute shoppers → store returns → recycled into nonwoven felts for protective packaging. Built for retailers, investors, and collaborators." />
   <!-- Privacy-friendly analytics (no cookies). Change data-domain if you use a custom domain -->
   <script defer data-domain="shekh-theperseverant.github.io" src="https://plausible.io/js/script.js"></script>
   <style>
@@ -39,6 +39,8 @@
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     ul{margin:8px 0 0 18px;color:var(--muted)}
     .section{padding:28px 0}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery img{width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
     .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:stretch}
     .step{display:flex;flex-direction:column;gap:8px}
     .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#f0f6ff;color:#1b6fe2;font-size:12px;border:1px solid #d8e7ff}
@@ -50,9 +52,8 @@
     .lang{display:inline-flex;gap:8px;align-items:center}
     .lang button{background:#f1f7ff;border:1px solid #d9e9ff;color:#0c3d8a;border-radius:999px;padding:6px 10px;cursor:pointer}
     .lang button.active{background:var(--fi-blue);color:#fff;border-color:var(--fi-blue)}
-    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.flow{grid-template-columns:1fr}}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.flow{grid-template-columns:1fr}}
     .note{font-size:12px;color:var(--muted)}
-    .table{width:100%;border-collapse:collapse}.table th,.table td{border:1px solid var(--border);padding:10px}
   </style>
 </head>
 <body>
@@ -65,9 +66,10 @@
           <a href="#mission"><span data-i18n="en">Mission</span><span data-i18n="fi">Missio</span></a>
           <a href="#why"><span data-i18n="en">Why Pilot</span><span data-i18n="fi">Miksi pilotti</span></a>
           <a href="#products"><span data-i18n="en">Products</span><span data-i18n="fi">Tuotteet</span></a>
+          <a href="#gallery"><span data-i18n="en">Gallery</span><span data-i18n="fi">Kuvia</span></a>
           <a href="#metrics"><span data-i18n="en">Impact</span><span data-i18n="fi">Vaikutus</span></a>
           <a href="#sources"><span data-i18n="en">Sources</span><span data-i18n="fi">Lähteet</span></a>
-          <a href="#aboutme"><span data-i18n="en">Team</span><span data-i18n="fi">Tiimi</span></a>
+          <a href="#team"><span data-i18n="en">Team</span><span data-i18n="fi">Tiimi</span></a>
           <a class="btn primary" href="#contact"><span data-i18n="en">Contact</span><span data-i18n="fi">Yhteys</span></a>
           <div class="lang"><button id="btn-en" class="active">EN</button><button id="btn-fi">FI</button></div>
         </div>
@@ -85,7 +87,7 @@
           <span data-i18n="en">Jute bags that come back as packaging — closing the loop.</span>
           <span data-i18n="fi">Juuttikassit palaavat pakkauksiksi — suljettu kierto.</span>
         </h1>
-        <p class="muted" data-i18n="en">QR-enabled jute totes → store returns → recycled into nonwoven felts used as protective packaging in distribution. Built for pilots with Finnish retailers, investors, and collaborators.</p>
+        <p class="muted" data-i18n="en">QR-enabled jute totes → store returns → recycled into nonwoven felts for protective packaging. Built for pilots with Finnish retailers, investors, and collaborators.</p>
         <p class="muted" data-i18n="fi">QR-koodatut juuttikassit → palautus myymälään → kierrätys neulahuoviksi suojapakkaukseen. Suunniteltu piloteille Suomessa: kauppa, sijoittajat ja kumppanit.</p>
         <div style="display:flex;gap:10px;margin-top:12px">
           <a class="btn primary" href="#why"><span data-i18n="en">Why pilot with us</span><span data-i18n="fi">Miksi pilotointi</span></a>
@@ -116,7 +118,7 @@
         </div>
         <div class="card">
           <h3 data-i18n="en">Our Purpose</h3><h3 data-i18n="fi">Tarkoitus</h3>
-          <p data-i18n="en">We help retailers replace single-use plastics and recover fibers back into logistics—proving circularity at store and DC level.</p>
+          <p data-i18n="en">We help retailers replace single-use plastics and recover fibers back into logistics—proving circularity at store and distribution-center level.</p>
           <p data-i18n="fi">Autamme kauppaa korvaamaan kertakäyttömuovin ja palauttamaan kuidun logistiikkaan—kiertotalous todeksi myymälässä ja jakelukeskuksessa.</p>
         </div>
       </div>
@@ -144,8 +146,8 @@
         </div>
         <div class="card">
           <h3 data-i18n="en">Future Plan</h3><h3 data-i18n="fi">Tulevaisuuden suunnitelma</h3>
-          <p data-i18n="en">Diversify into broader jute products (reusable retail, packaging formats) and reform parts of the plastic manufacturing industry by transitioning capacity to jute processing (nonwovens, molded-fiber blends).</p>
-          <p data-i18n="fi">Laajennamme juuttituotteisiin (uudelleenkäytettävät, pakkausratkaisut) ja autamme muoviteollisuutta siirtymään juutin jalostukseen (kuitukankaat, kuitumuottiratkaisut).</p>
+          <p data-i18n="en">Diversify into broader jute products and help reform parts of the plastic manufacturing industry by transitioning capacity to jute processing (nonwovens, molded‑fiber blends).</p>
+          <p data-i18n="fi">Laajennamme juuttituotteisiin ja autamme muoviteollisuutta siirtymään juutin jalostukseen (kuitukankaat, kuitumuottiratkaisut).</p>
         </div>
       </div>
     </section>
@@ -156,24 +158,22 @@
       <div class="card">
         <h3 data-i18n="en">Leadership & Policy Fit</h3><h3 data-i18n="fi">Johtajuus & politiikkalinja</h3>
         <ul>
-          <li data-i18n="en">Be the **first in Finland/Nordics** to operationalize a consumer-visible jute loop (buy→return→reuse in packaging).</li>
-          <li data-i18n="fi">Ole **Suomen/Pohjolan ensimmäinen** kuluttajille näkyvän juuttikierron käyttöönotossa (osto→palautus→uusiokäyttö pakkauksissa).</li>
-          <li data-i18n="en">Directly supports Finland’s **plastic carrier bag reduction** (≤40 bags/person by 2025) through substitution and behavior change. <a href="https://ym.fi/en/green-deals" target="_blank" rel="noopener">Ministry of the Environment</a></li>
-          <li data-i18n="fi">Tukee **muovikassien vähennystavoitetta** (≤40/hlö vuoteen 2025). <a href="https://ym.fi/en/green-deals" target="_blank" rel="noopener">Ympäristöministeriö</a></li>
-          <li data-i18n="en">Aligns with S-ryhmä’s **−20% virgin plastic by 2025** in bags/PL packaging. <a href="https://s-ryhma.fi/en/sustainability/climate-and-natural-resources/circular-economy" target="_blank">S-ryhmä</a></li>
-          <li data-i18n="fi">Linjassa S-ryhmän **−20 % neitseellinen muovi 2025** -tavoitteen kanssa. <a href="https://s-ryhma.fi/en/sustainability/climate-and-natural-resources/circular-economy" target="_blank">S-ryhmä</a></li>
+          <li data-i18n="en">Be among the first in Finland/Nordics to run a consumer‑visible jute loop (buy → return → reuse in packaging).</li>
+          <li data-i18n="fi">Ole Suomen/Pohjolan ensimmäisiä kuluttajille näkyvän juuttikierron toteuttajia (osto → palautus → uusiokäyttö pakkauksissa).</li>
+          <li data-i18n="en">Supports Finland’s plastic carrier bag reduction (≤40 bags/person by 2025). <a href="https://ym.fi/en/green-deals" target="_blank" rel="noopener">Ministry of the Environment</a></li>
+          <li data-i18n="fi">Tukee muovikassien vähennystavoitetta (≤40/hlö vuoteen 2025). <a href="https://ym.fi/en/green-deals" target="_blank" rel="noopener">Ympäristöministeriö</a></li>
         </ul>
         <h3 data-i18n="en">Brand & Consumer Impact</h3><h3 data-i18n="fi">Brändi & kuluttajavaikutus</h3>
         <ul>
-          <li data-i18n="en">“Eco-shopper” behavior: QR storytelling + return rewards make circularity tangible at checkout.</li>
-          <li data-i18n="fi">“Eco-shopper” – QR-tarinankerronta + palautusetu tekevät kiertotaloudesta näkyvää kassalla.</li>
+          <li data-i18n="en">Eco‑shopper behavior: QR storytelling + return rewards make circularity tangible at checkout.</li>
+          <li data-i18n="fi">Eco‑shopperi: QR‑tarina + palautuspalkinto tekevät kierrosta näkyvän kassalla.</li>
         </ul>
         <h3 data-i18n="en">Economics</h3><h3 data-i18n="fi">Talous</h3>
         <ul>
-          <li data-i18n="en">Jute shoppers retail margin; reduced plastic-bag procurement over time.</li>
-          <li data-i18n="fi">Juuttikasseista vähittäismarginaali; muovikassien hankinnan väheneminen ajan myötä.</li>
-          <li data-i18n="en">Dunnage substitution: replace part of bubble/foam with jute felts made from returns.</li>
-          <li data-i18n="fi">Suojamateriaalin korvaus: paluukuitu → juuttihuovat kuplamuovin/vaahdon tilalle.</li>
+          <li data-i18n="en">Retail margin on jute shoppers; declining plastic‑bag procurement over time.</li>
+          <li data-i18n="fi">Vähittäismarginaali juuttikasseista; muovikassien hankinnan pieneneminen.</li>
+          <li data-i18n="en">Dunnage substitution: replace bubble/foam with jute felts made from returns.</li>
+          <li data-i18n="fi">Suojamateriaalin korvaus: kuplamuovi/vaahto → palautusjuutista tehty huopa.</li>
         </ul>
       </div>
     </section>
@@ -189,31 +189,44 @@
             <li data-i18n="fi">12–16 oz kudottu juutti; vahvistetut saumat</li>
             <li data-i18n="en">10–15 kg load; 50–100+ uses</li>
             <li data-i18n="fi">10–15 kg kantavuus; 50–100+ käyttökertaa</li>
-            <li data-i18n="en">2-color custom print; unique QR</li>
-            <li data-i18n="fi">2-värinen painatus; yksilöllinen QR</li>
+            <li data-i18n="en">2‑color custom print; unique QR</li>
+            <li data-i18n="fi">2‑värinen painatus; yksilöllinen QR</li>
           </ul>
         </div>
         <div class="card">
-          <h3 data-i18n="en">Jute Shopper (Weather-lined)</h3><h3 data-i18n="fi">Juuttikassi (Säävuorattu)</h3>
+          <h3 data-i18n="en">Jute Shopper (Zipper)</h3><h3 data-i18n="fi">Juuttikassi (Vetoketju)</h3>
           <ul>
-            <li data-i18n="en">Light bio-based lining (optional)</li>
-            <li data-i18n="fi">Kevyt biopohjainen vuori (valinnainen)</li>
-            <li data-i18n="en">Moisture-tolerant; still recyclable</li>
-            <li data-i18n="fi">Kestää kosteutta; kierrätettävä</li>
-            <li data-i18n="en">Suitable for Nordic climate</li>
-            <li data-i18n="fi">Sopii pohjoiseen ilmastoon</li>
+            <li data-i18n="en">Zippered top; cotton webbing handles</li>
+            <li data-i18n="fi">Vetoketjullinen yläreuna; puuvillanauhakahvat</li>
+            <li data-i18n="en">Moisture‑tolerant lining (optional)</li>
+            <li data-i18n="fi">Kosteutta kestävä vuori (valinnainen)</li>
           </ul>
         </div>
         <div class="card">
           <h3 data-i18n="en">Recycled Jute Felts</h3><h3 data-i18n="fi">Kierrätetyt juuttihuovat</h3>
           <ul>
-            <li data-i18n="en">Needle-punched nonwovens from returns</li>
+            <li data-i18n="en">Needle‑punched nonwovens from returns</li>
             <li data-i18n="fi">Neulahuovat palautusjuutista</li>
-            <li data-i18n="en">Void-fill, edge liners, pallet pads (non-food-contact)</li>
+            <li data-i18n="en">Void‑fill, edge liners, pallet pads (non‑food‑contact)</li>
             <li data-i18n="fi">Täyte, reunasuojat, lavavälikkeet (ei elintarvikekosketusta)</li>
           </ul>
         </div>
       </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <h2 data-i18n="en">Gallery</h2><h2 data-i18n="fi">Kuvagalleria</h2>
+      <div class="gallery">
+        <img src="Nordic%20Shopper%20Tote%20(Zipper).jpg" alt="Jute shopper with zipper" />
+        <img src="Nordic%20Shopper%20Tote.jpg" alt="Jute shopper with print" />
+        <img src="Nordic%20Shopping.jpg" alt="Flat jute tote" />
+        <img src="jute_field_1.jpg" alt="Jute cultivation field" />
+        <img src="jute_field_2.jpg" alt="Harvested jute" />
+        <img src="jute_processing_1.jpg" alt="Jute fiber processing" />
+      </div>
+      <p class="note" style="margin-top:8px" data-i18n="en">Tip: Upload your images to the repository root with the exact filenames above (or change paths here).</p>
+      <p class="note" data-i18n="fi">Vinkki: Lataa kuvat repoon samoilla tiedostonimillä (tai muuta polut tässä).</p>
     </section>
 
     <!-- IMPACT METRICS -->
@@ -221,96 +234,63 @@
       <h2 data-i18n="en">Impact Metrics</h2><h2 data-i18n="fi">Vaikutusmittarit</h2>
       <div class="card">
         <p class="muted" data-i18n="en">Estimate plastic bags avoided by switching to jute (conservative: 1 jute bag = 50–100 uses → 50–100 plastic bags avoided).</p>
-        <p class="muted" data-i18n="fi">Arvioi vältetyt muovikassit juutin avulla (varovainen arvio: 1 juuttikassi = 50–100 käyttökertaa → 50–100 muovikassia vältetty).</p>
+        <p class="muted" data-i18n="fi">Arvioi vältetyt muovikassit juutin avulla (varovainen: 1 juuttikassi = 50–100 käyttökertaa → 50–100 muovikassia vältetty).</p>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:end">
           <label>Jute bags<input id="bags" type="number" min="0" value="5000" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px"></label>
           <label>Uses per bag<input id="uses" type="number" min="1" value="50" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px"></label>
           <button class="btn primary" onclick="calcAvoided()">Calculate</button>
         </div>
         <p id="result" style="margin-top:10px;font-weight:600"></p>
-        <p class="note">
-          LCA context for alternatives: Danish EPA (2018) shows high reuse thresholds for cotton/paper vs. LDPE carriers.
-          <a href="https://www2.mst.dk/Udgiv/publications/2018/02/978-87-93614-73-4.pdf" target="_blank" rel="noopener">Source</a>.
-        </p>
+        <p class="note">LCA context: Danish EPA (2018) reuse thresholds for cotton/paper vs. LDPE. <a href="https://www2.mst.dk/Udgiv/publications/2018/02/978-87-93614-73-4.pdf" target="_blank" rel="noopener">Source</a>.</p>
       </div>
     </section>
 
     <!-- SOURCES (INVESTORS) -->
     <section id="sources" class="section">
-      <h2 data-i18n="en">Sources (Investor Fact-check)</h2><h2 data-i18n="fi">Lähteet (Sijoittajille)</h2>
+      <h2 data-i18n="en">Sources (Investor Fact‑check)</h2><h2 data-i18n="fi">Lähteet (Sijoittajille)</h2>
       <div class="card">
         <ul>
-          <li>
-            <strong>Finland policy — Plastic carrier bags:</strong>
-            <em>“By the end of 2025, no more than 40 bags per person per year should be used.”</em>
-            <a href="https://ym.fi/en/green-deals" target="_blank" rel="noopener">Ministry of the Environment (Green Deals)</a> ·
-            <a href="https://ym.fi/en/-/further-action-needed-to-reach-reduction-target-for-plastic-carrier-bags" target="_blank" rel="noopener">Further action needed (2024)</a>
-          </li>
-          <li>
-            <strong>Retail targets:</strong> S-ryhmä aims to cut virgin plastic in plastic bags & private-label packaging by **20% by 2025** vs 2018.
-            <a href="https://s-ryhma.fi/en/sustainability/climate-and-natural-resources/circular-economy" target="_blank">S-ryhmä — Circular economy</a>
-          </li>
-          <li>
-            <strong>FAO — Jute overview:</strong>
-            <em>“Jute is a long, soft, shiny bast fiber that can be spun into coarse, strong threads.”</em>
-            <a href="https://www.fao.org/economic/futurefibres/fibres/jute/en/" target="_blank" rel="noopener">FAO Future Fibres — Jute</a>
-          </li>
-          <li>
-            <strong>Natural fiber impact (peer-reviewed):</strong>
-            <a href="https://www.mdpi.com/2071-1050/15/2/1225" target="_blank" rel="noopener">MDPI Sustainability (2023)</a>
-          </li>
-          <li>
-            <strong>Recent research (peer-reviewed):</strong>
-            <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352550925000600" target="_blank" rel="noopener">ScienceDirect (2025)</a>
-          </li>
-          <li>
-            <strong>Carrier bag LCA (comparative):</strong>
-            <a href="https://www2.mst.dk/Udgiv/publications/2018/02/978-87-93614-73-4.pdf" target="_blank" rel="noopener">Danish EPA (2018)</a>
-          </li>
+          <li><strong>Finland policy — Plastic carrier bags:</strong> <em>“By the end of 2025, no more than 40 bags per person per year should be used.”</em> <a href="https://ym.fi/en/green-deals" target="_blank" rel="noopener">Ministry of the Environment</a></li>
+          <li><strong>Finland context — 55 bags/person in 2022:</strong> <a href="https://www.helsinkitimes.fi/finland-news/domestic/23925-finns-used-55-plastic-bags-per-capita-in-2022.html" target="_blank" rel="noopener">Helsinki Times</a></li>
+          <li><strong>FAO — Jute overview:</strong> <em>“Jute is a long, soft, shiny bast fiber that can be spun into coarse, strong threads.”</em> <a href="https://www.fao.org/economic/futurefibres/fibres/jute/en/" target="_blank" rel="noopener">FAO Future Fibres — Jute</a></li>
+          <li><strong>Carrier bag LCA (comparative):</strong> <a href="https://www2.mst.dk/Udgiv/publications/2018/02/978-87-93614-73-4.pdf" target="_blank" rel="noopener">Danish EPA (2018)</a></li>
+          <li><strong>Peer‑reviewed data on natural fibers/jute:</strong> <a href="https://www.mdpi.com/2071-1050/15/2/1225" target="_blank" rel="noopener">MDPI Sustainability (2023)</a></li>
+          <li><strong>Latest research (peer‑reviewed):</strong> <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352550925000600" target="_blank" rel="noopener">ScienceDirect (2025)</a></li>
         </ul>
       </div>
     </section>
 
     <!-- TEAM -->
-    <section id="aboutme" class="section">
+    <section id="team" class="section">
       <h2 data-i18n="en">Team</h2><h2 data-i18n="fi">Tiimi</h2>
       <div class="grid-2">
-        <div class="card">
-          <h3>Shekh Golam Rahman — Founder</h3>
-          <p>Researcher & financial analyst focused on sustainability, Nordic business models, and circular economy. Based in Tampere. Building Hyvä Juttu to prove a consumer-visible circular loop: jute shoppers that return as protective packaging.</p>
-          <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/shekh-g-rahman/" target="_blank" rel="noopener">shekh-g-rahman</a></p>
+        <div class="card" style="display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center">
+          <img src="founder.jpg" alt="Shekh Golam Rahman" style="width:120px;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--border)">
+          <div>
+            <h3>Shekh Golam Rahman — Founder</h3>
+            <p>AI & Sustainability enthusiast; researcher and financial analyst focused on Nordic circular business models. Building Hyvä Juttu to prove a consumer‑visible circular loop in Finnish retail.</p>
+            <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/shekh-g-rahman/" target="_blank" rel="noopener">shekh‑g‑rahman</a></p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Nilufa Yeasmin — Co-founder (Digital Marketing)</h3>
-          <p>Digital marketing specialist and **sustainability dreamer**. Leads consumer engagement, QR journeys, and growth marketing to shift behavior toward eco-shopping.</p>
-          <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/nilufa-yeasmin-digital-marketing-specialist/" target="_blank" rel="noopener">nilufa-yeasmin</a></p>
+        <div class="card" style="display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center">
+          <img src="cofounder.jpg" alt="Nilufa Yeasmin" style="width:120px;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--border)">
+          <div>
+            <h3>Nilufa Yeasmin — Co‑founder</h3>
+            <p>AI & Sustainability enthusiast. Leads consumer engagement, QR journeys and behavior change toward eco‑shopping across Finland/Nordics.</p>
+            <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/nilufa-yeasmin-digital-marketing-specialist/" target="_blank" rel="noopener">nilufa‑yeasmin</a></p>
+          </div>
         </div>
       </div>
+      <p class="note">Upload team photos as <code>founder.jpg</code> and <code>cofounder.jpg</code> in the repo root, or update the file names above.</p>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (no form) -->
     <section id="contact" class="section">
       <h2 data-i18n="en">Contact</h2><h2 data-i18n="fi">Yhteys</h2>
-      <div class="grid-2">
-        <div class="card">
-          <p><strong>Hyvä Juttu</strong><br/>Tampere, Finland</p>
-          <p class="muted">Email: <a href="mailto:grahmanmba@gmail.com">grahmanmba@gmail.com</a><br/>Phone: +358 41 727 5352</p>
-          <p class="muted" data-i18n="en">We welcome pilots with Finnish retailers, logistics operators, packaging partners, and investors.</p>
-          <p class="muted" data-i18n="fi">Etsimme pilotteja kaupan, logistiikan ja pakkausalan kumppaneiden sekä sijoittajien kanssa.</p>
-        </div>
-        <div class="card">
-          <form action="mailto:grahmanmba@gmail.com" method="post" enctype="text/plain">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <div><label><span data-i18n="en">Name</span><span data-i18n="fi">Nimi</span><br/><input required name="name" placeholder="Your name" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px"></label></div>
-              <div><label>Email<br/><input required type="email" name="email" placeholder="you@example.com" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px"></label></div>
-            </div>
-            <label style="display:block;margin-top:10px"><span data-i18n="en">Message</span><span data-i18n="fi">Viesti</span><br/>
-              <textarea rows="4" name="message" placeholder="Tell us about your project or pilot idea..." style="width:100%;padding:10px;border:1px solid var(--border);border-radius:12px"></textarea>
-            </label>
-            <div style="margin-top:12px"><button class="btn primary" type="submit"><span data-i18n="en">Send</span><span data-i18n="fi">Lähetä</span></button></div>
-          </form>
-          <p class="note" style="margin-top:8px">Prefer a call? WhatsApp/Signal available on the number above.</p>
-        </div>
+      <div class="card">
+        <p><strong>Hyvä Juttu</strong> · Tampere, Finland</p>
+        <p>Email: <a href="mailto:grahmanmba@gmail.com">grahmanmba@gmail.com</a> · Phone/WhatsApp/Signal: <a href="tel:+358417275352">+358 41 727 5352</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/shekh-g-rahman/" target="_blank" rel="noopener">Shekh G. Rahman</a> · <a href="https://www.linkedin.com/in/nilufa-yeasmin-digital-marketing-specialist/" target="_blank" rel="noopener">Nilufa Yeasmin</a></p>
       </div>
     </section>
   </main>
@@ -340,11 +320,10 @@
       const bags = Math.max(0, parseInt(document.getElementById('bags').value||0,10));
       const uses = Math.max(1, parseInt(document.getElementById('uses').value||1,10));
       const avoided = bags * uses; // 1 use ≈ 1 single-use bag avoided (conservative)
-      document.getElementById('result').textContent =
-        new Intl.NumberFormat().format(avoided) + ' single-use plastic bags potentially avoided over the jute bags’ lifetime.';
+      document.getElementById('result').textContent = new Intl.NumberFormat().format(avoided) + ' single-use plastic bags potentially avoided over the jute bags’ lifetime.';
       if(window.plausible){ plausible('ImpactCalc', {props:{bags,uses,avoided}}); }
     }
-    document.addEventListener('DOMContentLoaded', calcAvoided);
+    document.addEventListener('DOMContentLoaded', ()=>{ const r=document.getElementById('result'); if(r) calcAvoided(); });
   </script>
 </body>
 </html>
